@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 export default function PokemonList() {
-  const { name } = useParams;
+  const { name } = useParams();
   const [pokemon, setPokemon] = useState(null);
 
   useEffect(() => {
@@ -15,6 +15,10 @@ export default function PokemonList() {
 
     getPokemon();
   }, [name]);
+
+    if (!pokemon) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <>

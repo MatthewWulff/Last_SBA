@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./Home.jsx";
-import Pokemon from "./Pokemon.jsx"; // this was missing
+import Pokemon from "./Pokemon.jsx"; 
 import "./App.css";
 
 import "./App.css";
