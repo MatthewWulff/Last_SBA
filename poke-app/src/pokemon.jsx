@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
 
-export default function PokemonList() {
+export default function Pokemon() {
   const { name } = useParams();
   const [pokemon, setPokemon] = useState(null);
 
