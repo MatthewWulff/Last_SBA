@@ -1,18 +1,18 @@
-import { useState } from 'react'
+import { Route, Routes } from "react-router-dom";
+import Home from "./Home.jsx";
+import Pokemon from "./Pokemon.jsx"; // this was missing
+import "./App.css";
 
+import "./App.css";
 
-import './App.css'
-import { Router } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <Routes>
-        
-  
+      <Route path="/" element={<Home />} />
+      <Route path="/pokemon/:name" element={<Pokemon />} />
     </Routes>
-  )
+  );
 }
 
-export default App
+export default App;

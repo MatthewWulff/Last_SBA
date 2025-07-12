@@ -5,12 +5,12 @@ export default function Home() {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    async function pokeList() {
+    async function PokeList() {
       const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=20");
       const list = await res.json();
       setList(list.results);
     }
-    pokeList();
+    PokeList();
   }, []);
 
   return (
@@ -19,7 +19,7 @@ export default function Home() {
       <ul>
         {list.map((pokemon) => (
           <li key={pokemon.name}>
-            <Link to={`/detail/${pokemon.name}`}>{pokemon.name}</Link>
+            <Link to={`/pokemon/${pokemon.name}`}>{pokemon.name}</Link>
           </li>
         ))}
       </ul>
